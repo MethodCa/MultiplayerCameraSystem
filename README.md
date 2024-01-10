@@ -10,7 +10,7 @@ To achieve the correct position and zoom of the camera the system finds the X po
 To achive the change in zoom the Camera's orthographic size is re-calculated based in the palyers' position as shown in the following code block:
 ```c#
  // Calculate the most left / right player
- //with Mathf.Min and Mathf.Max, the values are stored in leftPlayer and rightPlayer.
+ // using Mathf.Min and Mathf.Max, the values are stored in leftPlayer and rightPlayer.
  var leftPlayer = Mathf.Min(position1.x, position2.x, position3.x, position4.x);
  var rightPlayer = Mathf.Max(position1.x, position2.x, position3.x, position4.x);
  var topPlayer = Mathf.Max(position1.y, position2.y, position3.y, position4.y);
