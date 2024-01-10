@@ -1,4 +1,4 @@
-# Multiplayer Camera System
+# Multiplayer Camera System for Unity 2D games
 
 Camera system for 2D multiplayer games that updates the camera to position it on the centre of the 4 players in the X axis. The camera zoom in/out to maintain all players in the frame to a maximum Camera size provided as a parameter, it also reset the camera in the Y axis per every change in zoom to maintain correct camera flow. 
 If one of the players is out of frame the camera zoom must resize to frame all players.
