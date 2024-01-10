@@ -7,6 +7,24 @@ To achieve the correct position and zoom of the camera the system finds the X po
 
 ![cameraSystem2](https://github.com/MethodCa/MultiplayerCameraSystem/assets/15893276/6e0ac8f9-80a1-4301-844e-926424e28e9f)
 
-To achive the change in zoom the Camera's orthographic size is re-calculated based in the palyers' position.
+To achive the change in zoom the Camera's orthographic size is re-calculated based in the palyers' position as shown in the following code block:
+```c#
+ // Calculate the most left / right player with Mathf.Min and Mathf.Max, the values are stored in leftPlayer and rightPlayer.
+ var leftPlayer = Mathf.Min(position1.x, position2.x, position3.x, position4.x);
+ var rightPlayer = Mathf.Max(position1.x, position2.x, position3.x, position4.x);
+ var topPlayer = Mathf.Max(position1.y, position2.y, position3.y, position4.y);
+ var bottomPlayer = Mathf.Min(position1.y, position2.y, position3.y, position4.y);
+
+ // Calculate the distance between leftPlayer and rightPlayer
+ var distanceX = Vector2.Distance(new Vector2(leftPlayer, 0), new Vector2(rightPlayer, 0));
+ // Calculate the distance between topPlayer and bottomPlayer
+ var distanceY = Vector2.Distance(new Vector2(0, bottomPlayer), new Vector2(0, topPlayer));
+
+ // Apply zoom incrementing/decrementing camera orthographic size.
+ var newOrthographicSize = CalculateZoomValue(distanceX, distanceY);
+ mainCamera.orthographicSize = newOrthographicSize;
+```
+
+
 
 ![cameraSystem](https://github.com/MethodCa/MultiplayerCameraSystem/assets/15893276/83eab164-8cd6-4201-b266-08969dacf0ce)
