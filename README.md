@@ -28,8 +28,9 @@ To achive the change in zoom the Camera's orthographic size is re-calculated bas
 ```
 
 
-
-![cameraSystem](https://github.com/MethodCa/MultiplayerCameraSystem/assets/15893276/83eab164-8cd6-4201-b266-08969dacf0ce)
+<p align="center">
+    <img src="https://github.com/MethodCa/MultiplayerCameraSystem/assets/15893276/83eab164-8cd6-4201-b266-08969dacf0ce" alt="UltraSword">
+</p>
 
 
 > [!CAUTION]
