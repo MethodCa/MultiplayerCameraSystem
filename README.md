@@ -4,8 +4,9 @@ Camera system for 2D multiplayer games that updates the camera to position it on
 If one of the players is out of frame the camera zoom must resize to frame all players.
 To achieve the correct position and zoom of the camera the system finds the X position where the camera should be positioned taking into account 4 players, this is done by finding the player that is situated at the most left, and most right and positioning the camera at the centre of them.
 
-
-![cameraSystem2](https://github.com/MethodCa/MultiplayerCameraSystem/assets/15893276/6e0ac8f9-80a1-4301-844e-926424e28e9f)
+<p align="center">
+    <img src="https://github.com/MethodCa/MultiplayerCameraSystem/assets/15893276/6e0ac8f9-80a1-4301-844e-926424e28e9f" alt="UltraSword">
+</p>
 
 To achive the change in zoom the Camera's orthographic size is re-calculated based in the palyers' position as shown in the following code block:
 ```c#
